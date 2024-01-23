@@ -1,0 +1,41 @@
+.UserProfile {
+  width: 100%;
+  min-height: calc(100vh - 50px - 50px);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+
+.UserProfile h2 {
+  margin-bottom: 20px;
+}
+
+.UserProfile input {
+  height: 30px;
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.UserProfile p {
+  margin-bottom: 10px;
+}
+
+.UserProfile button {
+  height: 30px;
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14pt;
+  background-color: #aad7ff;
+  border-style: none;
+  margin-bottom: 10px;
+  transition: 0.3s linear;
+}
+
+.UserProfile button:hover {
+  background-color: #6ebcff;
+}

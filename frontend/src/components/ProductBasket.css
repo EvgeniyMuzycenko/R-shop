@@ -1,0 +1,82 @@
+.ProductBasket {
+  width: 100%;
+  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  margin: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ProductBasket img {
+  width: 200px;
+  margin-right: 10px;
+  transition: transform 500ms ease;
+}
+
+.ProductBasket img:hover {
+  transform: scale(1.05);
+}
+
+.ProductBasket h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ProductBasket p {
+  color: #797979;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ProductBasket .btn-del {
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.ProductBasket .btn-del:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+.ProductBasket .basketQty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductBasket .minus,
+.ProductBasket .plus {
+  width: 35px;
+  outline: none;
+  padding: 5px;
+  border-style: none;
+  background-color: #aad7fa;
+  border-radius: 10px;
+  font-size: 24px;
+  margin: 15px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.ProductBasket .minus:hover,
+.plus:hover {
+  background-color: #78abd1;
+}
+
+.ProductBasket .qty {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .ProductBasket {
+    width: 300px;
+    flex-direction: column;
+  }
+}

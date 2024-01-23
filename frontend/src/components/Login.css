@@ -1,0 +1,58 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 15%;
+}
+
+.Login h1 {
+  margin-bottom: 20px;
+}
+
+.Login input {
+  height: 30px;
+  width: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Login button {
+  height: 30px;
+  width: auto;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #aad7ff;
+  border-style: none;
+  transition: 0.3s linear;
+}
+
+.Login button:hover {
+  background-color: #6ebcff;
+}
+
+.Login #loginError {
+  color: red;
+  margin-top: 10px;
+}
+
+.Login .reg {
+  color: #ff0000;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.Login .reg:hover {
+  text-decoration: underline;
+}
+
+.Login .btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  transition: 0.3s linear;
+}
+
+.Login .btn-close:hover {
+  color: #ff0000;
+}

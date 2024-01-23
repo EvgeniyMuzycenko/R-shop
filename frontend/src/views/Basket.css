@@ -1,0 +1,36 @@
+.Basket {
+  width: 100%;
+  min-height: calc(100vh - 50px - 50px);
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Basket .order {
+  height: 50px;
+  width: 200px;
+  margin-top: 15px;
+  border-style: none;
+  background-color: #aad7fa;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.Basket .order:hover {
+  background-color: #78abd1;
+}
+
+.Basket .empty h2 {
+  font-size: 30px;
+  margin: 50px;
+}
+
+.Basket .authText {
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 20px;
+}
