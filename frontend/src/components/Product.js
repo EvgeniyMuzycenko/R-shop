@@ -16,16 +16,21 @@ function Product({ id, image, header, price, ram, screen, cpu, graphics, storage
   }
 
   function addToBasket() {
-    const index = basket.findIndex(value => value.id === product.id)
-    console.log(index)
+    let inBasket = false;
+    basket.forEach(element => {
+      if (element.id === product.id)
+        inBasket = true
+    })
+    console.log(inBasket)
 
-    if (index < 0) {
-      setBasket(prevState => [...prevState, product])
+    if (!inBasket) {
+      setBasket(basket => [...basket, product])
       setBasketPrice(current => current + product.price)
       setBasketQty(current => current + 1)
     } else {
       return
     }
+
     setTimeout(() => {
       setMessage('Товар добавлен в корзину!')
       setModalBox('MessageBox')
