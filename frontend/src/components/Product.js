@@ -27,14 +27,18 @@ function Product({ id, image, header, price, ram, screen, cpu, graphics, storage
       setBasket(basket => [...basket, product])
       setBasketPrice(current => current + product.price)
       setBasketQty(current => current + 1)
+
+      setTimeout(() => {
+        setMessage('Товар добавлен в корзину!')
+        setModalBox('MessageBox')
+      }, 100)
     } else {
+      setTimeout(() => {
+        setMessage('Товар уже в корзине!')
+        setModalBox('MessageBox')
+      }, 100)
       return
     }
-
-    setTimeout(() => {
-      setMessage('Товар добавлен в корзину!')
-      setModalBox('MessageBox')
-    }, 100)
   }
 
   function onShow(productCard) {
@@ -48,7 +52,7 @@ function Product({ id, image, header, price, ram, screen, cpu, graphics, storage
       <img src={image} alt="" onClick={() => onShow(product)} />
       <h1>{header}</h1>
       <p>{new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', currencyDisplay: 'narrowSymbol', maximumSignificantDigits: 5 }).format(price)}</p>
-      <button className='btn-add-to-cart' onClick={() => addToBasket()}>В корзину</button>
+      <button id='btn' onClick={() => addToBasket()}>В корзину</button>
     </div>
   );
 }

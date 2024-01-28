@@ -5,16 +5,21 @@ import { FaX } from "react-icons/fa6";
 
 function ModalBoxProduct({ productCard, isOpen, onClose, setBasket, setBasketPrice, setBasketQty, basket }) {
 
-  function addToBasket(e) {
-    const index = basket.findIndex(value => value.id === productCard.id)
-    console.log(index)
-    document.getElementById('checkMessage').innerText = "Товар добавлен в корзину!"
+  function addToBasket() {
+    let inBasket = false;
+    basket.forEach(element => {
+      if (element.id === productCard.id)
+        inBasket = true
+    })
+    console.log(inBasket)
 
-    if (index < 0) {
+    if (!inBasket) {
       setBasket(prevState => [...prevState, productCard])
       setBasketPrice(current => current + productCard.price)
       setBasketQty(current => current + 1)
+      document.getElementById('checkMessage').innerText = "Товар добавлен в корзину!"
     } else {
+      document.getElementById('checkMessage').innerText = "Товар уже в корзине!"
       return
     }
   }
@@ -35,7 +40,7 @@ function ModalBoxProduct({ productCard, isOpen, onClose, setBasket, setBasketPri
         <p>Графика: {productCard.graphics}</p>
         <p>Объем накопителя: {productCard.storage} ГБ</p>
         <p className='price'>{new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', currencyDisplay: 'narrowSymbol', maximumSignificantDigits: 5 }).format(productCard.price)}</p>
-        <button className='btn-add-to-cart' onClick={() => addToBasket()}>В корзину</button>
+        <button onClick={() => addToBasket()}>В корзину</button>
         <p className='check' id='checkMessage'></p>
         <FaX className="modal-close-btn" onClick={() => onClose()} size="20" />
       </div>
