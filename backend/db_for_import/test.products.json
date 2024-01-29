@@ -1,0 +1,123 @@
+[{
+  "_id": {
+    "$oid": "65916ab80932f21037ae507f"
+  },
+  "header": "Ноутбук DELL Latitude 3410",
+  "price": 66999,
+  "image": "https://wallegro.ru/tpimg/a/original/11bcfe/0da93c7a43fcb2ba4304ac5e2e80/DELL-5480-i7-7820HQ-16GB-512-GB-SSD-W10P-1920x1080",
+  "cpu": "Intel Core i3-10110U",
+  "graphics": "Intel UHD Graphics",
+  "screen": "14",
+  "storage": "1000",
+  "ram": "8"
+},
+{
+  "_id": {
+    "$oid": "65a6abd097fc9db56872c128"
+  },
+  "header": "Ноутбук ACER A515-57-555M ",
+  "price": 62999,
+  "image": "https://i.pinimg.com/736x/37/6a/ac/376aac26ba00107fc19fd890bb8576cd--acer-aspire-notebook-notebook-amd.jpg",
+  "cpu": "Intel Core i5-12450H",
+  "graphics": "Intel UHD Graphics",
+  "screen": "15,6",
+  "storage": "512",
+  "ram": "16"
+},
+{
+  "_id": {
+    "$oid": "65a6abd397fc9db56872c129"
+  },
+  "header": "Ноутбук ASUS X515EA-BQ4265",
+  "price": 34999,
+  "image": "https://www.planetashop.ru/descriptions/main/pics_200x200/279182.jpg",
+  "cpu": "Intel Pentium 7505",
+  "graphics": "Intel UHD Graphics",
+  "screen": "15,6",
+  "storage": "256",
+  "ram": "8"
+},
+{
+  "_id": {
+    "$oid": "65ad3e021159703deb876c8a"
+  },
+  "header": "Ноутбук AORUS 15",
+  "price": 106999,
+  "image": "https://orbita-sc.ru/upload/iblock/f2b/f2bbbc44db29e1ce4a2111174744cb5d.jpeg",
+  "cpu": "Intel Core i5-12500H",
+  "graphics": "Intel Iris Xe Graphics",
+  "screen": "15.6",
+  "storage": "512",
+  "__v": 0,
+  "ram": "16"
+},
+{
+  "_id": {
+    "$oid": "65ad3f561159703deb876c8e"
+  },
+  "header": "Ноутбук GIGABYTE G7",
+  "price": 81999,
+  "image": "https://assets.umart.com.au/newsite/images/202110/thumb_img/61013_thumb_G_1635312119073.webp",
+  "cpu": "Intel Core i5-12500H",
+  "graphics": "GeForce RTX 4050",
+  "screen": "17.3",
+  "storage": "512",
+  "__v": 0,
+  "ram": "16"
+},
+{
+  "_id": {
+    "$oid": "65ad3ffa1159703deb876c92"
+  },
+  "header": "Ноутбук MSI Katana 17 B11UCX-897XRU",
+  "price": 59999,
+  "image": "https://shops-prices.ru/image/products/msi-ge62-6qe-apache-pro-intel-core-i5-6300hq-2300-mhz1561920x108016gb1000gbdvd-rwnvidia-geforce-gtx-965mwi-fibluetoothwin-10-home_thumb.jpg",
+  "cpu": "Intel Core i5-11260H",
+  "graphics": "GeForce RTX 2050",
+  "screen": "17.3",
+  "storage": "256",
+  "__v": 0,
+  "ram": "8"
+},
+{
+  "_id": {
+    "$oid": "65ad442a5275bdb2887a6209"
+  },
+  "header": "Ноутбук ARDOR GAMING NEO G15-I5ND300",
+  "price": 71999,
+  "image": "https://frankfurt.apollo.olxcdn.com/v1/files/uoxxh6q9z36k2-KZ/image;s=200x0;q=50",
+  "cpu": "Intel Core i5-12450H",
+  "graphics": "GeForce RTX 3050",
+  "screen": "15,6",
+  "storage": "512",
+  "ram": "16",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ad44c05275bdb2887a620b"
+  },
+  "header": "Ноутбук Apple MacBook Air",
+  "price": 95699,
+  "image": "https://static.slickdealscdn.com/attachment/2/6/9/2/7/4/8295823.attach",
+  "cpu": "Apple M1",
+  "graphics": "Apple M1 7-core",
+  "screen": "13,3",
+  "storage": "256",
+  "ram": "8",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ad45275275bdb2887a620d"
+  },
+  "header": "Ноутбук HUAWEI MateBook D16 RLEF-X",
+  "price": 69999,
+  "image": "https://img.5element.by/import/images/ut/goods/good_dc37c691-47c2-11e8-8144-005056841710/good_img_2a1221b3-4851-11e8-80c3-00505684296c_200.jpg",
+  "cpu": "Intel Core i5-12450H",
+  "graphics": "Intel UHD Graphics",
+  "screen": "16",
+  "storage": "512",
+  "ram": "16",
+  "__v": 0
+}]

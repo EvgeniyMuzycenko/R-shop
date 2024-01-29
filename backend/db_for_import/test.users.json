@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65916a7199c3786a82f09293"
+  },
+  "login": "grunt-88",
+  "password": "123",
+  "email": "grunt-88@mail.ru",
+  "__v": 0,
+  "role": "user",
+  "name": "Сергей"
+},
+{
+  "_id": {
+    "$oid": "659c1936d1a9f59c3f4ba641"
+  },
+  "login": "123",
+  "password": "123",
+  "email": "123@123.com",
+  "__v": 0,
+  "role": "user",
+  "name": "Сергей"
+},
+{
+  "_id": {
+    "$oid": "65a7c5e42cd7288f9a1b2fb6"
+  },
+  "login": "admin",
+  "password": "12345",
+  "email": "admin@pochta.ru",
+  "name": "Админ",
+  "__v": 0,
+  "role": "admin"
+}]
