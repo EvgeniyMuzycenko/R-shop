@@ -7,7 +7,7 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
   function showOrders() {
     return (
       <div className="basket-item">
-        {basket.map((item) => <ProductBasket key={item.id} id={item.id} header={item.header} image={item.image} price={item.price} setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} />)}
+        {basket.map((item) => <ProductBasket key={item.id} id={item.id} header={item.header} image={item.image} price={item.price} setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} basketPrice={basketPrice} basketQty={basketQty} />)}
         <p>Количество товаров: {basketQty}</p>
         <p>Общая стоимость товаров: {basketPrice}</p>
         {showBtnBuy()}
@@ -16,6 +16,7 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
   }
 
   function showNothing() {
+    localStorage.clear('basket')
     return (
       <div className='empty'>
         <h2>Товаров нет</h2>

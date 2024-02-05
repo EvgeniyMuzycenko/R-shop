@@ -1,7 +1,7 @@
 import React from 'react';
 import './Product.css';
 
-function Product({ id, image, header, price, ram, screen, cpu, graphics, storage, setBasket, setBasketPrice, setBasketQty, basket, setModalBox, setMessage, setProductCard, setmodalProdIsOpen }) {
+function Product({ id, image, header, price, ram, screen, cpu, graphics, storage, setBasket, setBasketPrice, basketPrice, setBasketQty, basketQty, basket, setModalBox, setMessage, setProductCard, setmodalProdIsOpen }) {
 
   const product = {
     id: id,
@@ -27,6 +27,10 @@ function Product({ id, image, header, price, ram, screen, cpu, graphics, storage
       setBasket(basket => [...basket, product])
       setBasketPrice(current => current + product.price)
       setBasketQty(current => current + 1)
+
+      localStorage.setItem('basket', JSON.stringify([...basket, product]))
+      localStorage.setItem('basketPrice', JSON.stringify(basketPrice + product.price))
+      localStorage.setItem('basketQty', JSON.stringify(basketQty + 1))
 
       setTimeout(() => {
         setMessage('Товар добавлен в корзину!')

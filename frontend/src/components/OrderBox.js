@@ -32,6 +32,9 @@ function OrderBox({ setModalBox, setMessage, setBasket, setBasketQty, setBasketP
             setBasketPrice(0)
             setMessage('Заказ успешно оформлен!')
             setModalBox('MessageBox')
+            localStorage.clear('basket')
+            localStorage.clear('basketPrice')
+            localStorage.clear('basketQty')
         }, 100)
     }
 

@@ -16,15 +16,15 @@ function App() {
 
   const [page, setPage] = useState('Main')
   const [modalBox, setModalBox] = useState('none')
-  const [basket, setBasket] = useState([])
-  const [basketPrice, setBasketPrice] = useState(0)
-  const [basketQty, setBasketQty] = useState(0)
+  const [basket, setBasket] = useState(JSON.parse(localStorage.getItem('basket')) || [])
+  const [basketPrice, setBasketPrice] = useState(JSON.parse(localStorage.getItem('basketPrice')) || 0)
+  const [basketQty, setBasketQty] = useState(JSON.parse(localStorage.getItem('basketQty')) || 0)
   const [token, setToken] = useState(localStorage.getItem('token'))
   const [message, setMessage] = useState('')
   const [productCard, setProductCard] = useState({})
 
   const pages = {
-    Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} setMessage={setMessage} setModalBox={setModalBox} token={token} productCard={productCard} setProductCard={setProductCard} />,
+    Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} basketPrice={basketPrice} setBasketQty={setBasketQty} basketQty={basketQty} basket={basket} setMessage={setMessage} setModalBox={setModalBox} token={token} productCard={productCard} setProductCard={setProductCard} />,
     Basket: <Basket basket={basket} setBasket={setBasket} basketPrice={basketPrice} setBasketPrice={setBasketPrice} basketQty={basketQty} setBasketQty={setBasketQty} setModalBox={setModalBox} token={token} />,
     UserProfile: <UserProfile token={token} setModalBox={setModalBox} />
   }

@@ -3,7 +3,7 @@ import './Main.css';
 import Product from '../components/Product';
 import ModalBoxProduct from '../components/ModalBoxProduct';
 
-function Main({ setBasket, setBasketPrice, setBasketQty, basket, setModalBox, setMessage, productCard, setProductCard }) {
+function Main({ setBasket, setBasketPrice, basketPrice, setBasketQty, basketQty, basket, setModalBox, setMessage, productCard, setProductCard }) {
 
   const [products, setProducts] = useState([])
   const [modalProdIsOpen, setmodalProdIsOpen] = useState(false)
@@ -23,7 +23,7 @@ function Main({ setBasket, setBasketPrice, setBasketQty, basket, setModalBox, se
     <div className="Main">
       {products.length ?
         (products.map((item) =>
-          <Product key={item._id} id={item._id} header={item.header} image={item.image} price={item.price} ram={item.ram} screen={item.screen} cpu={item.cpu} graphics={item.graphics} storage={item.storage} setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} setModalBox={setModalBox} setMessage={setMessage} productCard={productCard} setProductCard={setProductCard} setmodalProdIsOpen={setmodalProdIsOpen} />))
+          <Product key={item._id} id={item._id} header={item.header} image={item.image} price={item.price} ram={item.ram} screen={item.screen} cpu={item.cpu} graphics={item.graphics} storage={item.storage} setBasket={setBasket} setBasketPrice={setBasketPrice} basketPrice={basketPrice} setBasketQty={setBasketQty} basketQty={basketQty} basket={basket} setModalBox={setModalBox} setMessage={setMessage} productCard={productCard} setProductCard={setProductCard} setmodalProdIsOpen={setmodalProdIsOpen} />))
         : (<p>Нет товаров</p>)}
       <ModalBoxProduct productCard={productCard} isOpen={modalProdIsOpen} onClose={() => setmodalProdIsOpen(false)} setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} />
     </div>
