@@ -2,12 +2,17 @@ import React from 'react';
 import './Basket.css';
 import ProductBasket from '../components/ProductBasket';
 
-function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, setBasketQty, setModalBox, token }) {
+function Basket({ basket, setBasket, basketPrice, setBasketPrice,
+  basketQty, setBasketQty, setModalBox, token }) {
 
   function showOrders() {
     return (
       <div className="basket-item">
-        {basket.map((item) => <ProductBasket key={item.id} id={item.id} header={item.header} image={item.image} price={item.price} setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} basketPrice={basketPrice} basketQty={basketQty} />)}
+        {basket.map((item) =>
+          <ProductBasket key={item.id} id={item.id} header={item.header} image={item.image}
+            price={item.price} setBasket={setBasket} setBasketPrice={setBasketPrice}
+            setBasketQty={setBasketQty} basket={basket} basketPrice={basketPrice} basketQty={basketQty}
+          />)}
         <p>Количество товаров: {basketQty}</p>
         <p>Общая стоимость товаров: {basketPrice}</p>
         {showBtnBuy()}

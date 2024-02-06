@@ -2,7 +2,8 @@ import React from 'react';
 import './ProductBasket.css';
 import { FaRegTrashAlt } from "react-icons/fa";
 
-function ProductBasket({ id, image, header, price, setBasket, setBasketPrice, setBasketQty, basket, basketPrice, basketQty }) {
+function ProductBasket({ id, image, header, price, setBasket, setBasketPrice,
+  setBasketQty, basket, basketPrice, basketQty }) {
 
   function deleteBasket() {
     setBasket(current => current.filter(product => product.id !== id))

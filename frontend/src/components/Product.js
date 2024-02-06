@@ -1,7 +1,9 @@
 import React from 'react';
 import './Product.css';
 
-function Product({ id, image, header, price, ram, screen, cpu, graphics, storage, setBasket, setBasketPrice, basketPrice, setBasketQty, basketQty, basket, setModalBox, setMessage, setProductCard, setmodalProdIsOpen }) {
+function Product({ id, image, header, price, ram, screen, cpu, graphics, storage,
+  setBasket, setBasketPrice, basketPrice, setBasketQty, basketQty, basket, setModalBox,
+  setMessage, setProductCard, setmodalProdIsOpen }) {
 
   const product = {
     id: id,
@@ -55,7 +57,14 @@ function Product({ id, image, header, price, ram, screen, cpu, graphics, storage
     <div className="Product">
       <img src={image} alt="" onClick={() => onShow(product)} />
       <h1>{header}</h1>
-      <p>{new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', currencyDisplay: 'narrowSymbol', maximumSignificantDigits: 5 }).format(price)}</p>
+      <p>
+        {new Intl.NumberFormat('ru-RU', {
+          style: 'currency',
+          currency: 'RUB',
+          currencyDisplay: 'narrowSymbol',
+          maximumSignificantDigits: 5
+        }).format(price)}
+      </p>
       <button id='btn' onClick={() => addToBasket()}>В корзину</button>
     </div>
   );

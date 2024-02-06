@@ -24,18 +24,39 @@ function App() {
   const [productCard, setProductCard] = useState({})
 
   const pages = {
-    Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} basketPrice={basketPrice} setBasketQty={setBasketQty} basketQty={basketQty} basket={basket} setMessage={setMessage} setModalBox={setModalBox} token={token} productCard={productCard} setProductCard={setProductCard} />,
-    Basket: <Basket basket={basket} setBasket={setBasket} basketPrice={basketPrice} setBasketPrice={setBasketPrice} basketQty={basketQty} setBasketQty={setBasketQty} setModalBox={setModalBox} token={token} />,
+    Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} basketPrice={basketPrice}
+      setBasketQty={setBasketQty} basketQty={basketQty} basket={basket} setMessage={setMessage}
+      setModalBox={setModalBox} token={token} productCard={productCard} setProductCard={setProductCard} />,
+
+    Basket: <Basket basket={basket} setBasket={setBasket} basketPrice={basketPrice}
+      setBasketPrice={setBasketPrice} basketQty={basketQty} setBasketQty={setBasketQty}
+      setModalBox={setModalBox} token={token} />,
+
     UserProfile: <UserProfile token={token} setModalBox={setModalBox} />
   }
 
   const modalBoxes = {
     none: null,
-    Login: <ModalBox setModalBox={setModalBox}><Login setModalBox={setModalBox} setToken={setToken} setMessage={setMessage} /></ModalBox>,
-    Registration: <ModalBox setModalBox={setModalBox}><Registration setModalBox={setModalBox} setMessage={setMessage} /></ModalBox>,
-    MessageBox: <ModalBox setModalBox={setModalBox}><MessageBox setModalBox={setModalBox} message={message} /></ModalBox>,
-    AddProductBox: <ModalBox setModalBox={setModalBox}><AddProductBox setModalBox={setModalBox} setMessage={setMessage} /></ModalBox>,
-    OrderBox: <ModalBox setModalBox={setModalBox}><OrderBox setMessage={setMessage} setModalBox={setModalBox} setBasket={setBasket} setBasketQty={setBasketQty} setBasketPrice={setBasketPrice} /></ModalBox>
+    Login: <ModalBox setModalBox={setModalBox}>
+      <Login setModalBox={setModalBox} setToken={setToken} setMessage={setMessage} />
+    </ModalBox>,
+
+    Registration: <ModalBox setModalBox={setModalBox}>
+      <Registration setModalBox={setModalBox} setMessage={setMessage} />
+    </ModalBox>,
+
+    MessageBox: <ModalBox setModalBox={setModalBox}>
+      <MessageBox setModalBox={setModalBox} message={message} />
+    </ModalBox>,
+
+    AddProductBox: <ModalBox setModalBox={setModalBox}>
+      <AddProductBox setModalBox={setModalBox} setMessage={setMessage} />
+    </ModalBox>,
+
+    OrderBox: <ModalBox setModalBox={setModalBox}>
+      <OrderBox setMessage={setMessage} setModalBox={setModalBox} setBasket={setBasket}
+        setBasketQty={setBasketQty} setBasketPrice={setBasketPrice} />
+    </ModalBox>
   }
 
   return (

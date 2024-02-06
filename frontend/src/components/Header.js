@@ -17,7 +17,8 @@ function Header({ setPage, setModalBox, token, setToken }) {
         <ul className='nav-list'>
           <li className='nav-item' onClick={() => setPage('Main')}><FaHome size="25" /></li>
           <li className='nav-item' onClick={() => setPage('Basket')}><FaShoppingCart size="25" /></li>
-          <UserBox className='nav-item' setModalBox={setModalBox} token={token} setToken={setToken} setPage={setPage} />
+          <UserBox className='nav-item' setModalBox={setModalBox} token={token}
+            setToken={setToken} setPage={setPage} />
         </ul>
       </div>
       <button className='menu-btn'
